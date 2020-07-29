@@ -1,0 +1,47 @@
+
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+
+  body {
+    font-family: $font-primery;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+  
+  %link {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+  }
+  
+  %list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
+  %section-container {
+    width: 1200px;
+    align-items: center;
+    margin: 0px auto;
+    padding: 0px 15px;
+  }
+
+  %section-title {
+    margin-top: 0px;
+    margin-bottom: 50px;
+  
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: $secondary-text-color;
+  }

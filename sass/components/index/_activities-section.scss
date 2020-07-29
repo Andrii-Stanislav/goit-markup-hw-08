@@ -1,0 +1,68 @@
+  .activities-section {
+    padding-bottom: 94px;
+  }
+  
+  .activities-section .container {
+   @extend %section-container;
+  }
+  
+  .activities-title {
+   @extend %section-title;
+  }
+  
+  .activities-list {
+    @extend %list;
+    display: flex;
+  }
+  
+  .activities-list-item {
+    position: relative;
+    width: 370px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+        &::before {
+         content: "";
+         display: block;
+         width: 370px;
+         height: 294px;
+        }
+
+        &:nth-child(1)::before {
+          background-image: url(../../images/whot-we-do/desktop-app.jpg);
+        }
+          
+        &:nth-child(2)::before {
+          background-image: url(../../images/whot-we-do/mobile-app.jpg);
+        }
+          
+        &:nth-child(3)::before {
+          background-image: url(../../images/whot-we-do/design.jpg);
+        }
+          
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+  }
+
+  
+  .activities-list-description {
+    position: absolute;
+    bottom: 0px;
+  
+    display: block;
+    width: 100%;
+    height: 70px;
+    margin: 0px;
+    padding: 27px 0px;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: $darkbackground-text-color;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+    

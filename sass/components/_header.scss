@@ -1,0 +1,140 @@
+.header .container {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+  
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-nav > .list {
+    @extend %list;
+    display: flex; 
+    align-items: center;
+  }
+  
+  .logo {
+    @extend %link;
+    margin-right: 85px;
+    font-family: $font-logo;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    color: $logo-text-color;
+  }
+  
+  .logo-accent{
+    color: $accent-color;
+  }
+  
+  .main-nav-link-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  .main-nav-link{
+    @extend %link;
+    position: relative;
+    display: block;
+    padding-top: 34px;
+    padding-bottom: 34px;
+  
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+        color: $accent-color;
+        cursor: pointer;
+        }
+
+        &::after {
+            position: absolute;
+            bottom: 0px;
+            content: " ";
+            display: block;
+            width: 100%;
+            height: 4px;
+            border: #ffffff solid 1px;
+            border-radius: 2px;
+        }
+
+        &.current::after {
+            background-color: $accent-color;
+            border-color: $accent-color;
+        }
+          
+          
+        &current{
+            color: $accent-color;
+        }
+  }
+  
+
+  .header-address {
+    display: flex;
+    margin-left: 20px;
+  }
+  
+  .header-contacts-link{
+    @extend %link;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    color: $primery-text-color; 
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    cursor: pointer;
+    }
+  }
+  
+
+  %header-icon {
+    margin-right: 10px; 
+    fill: $primery-text-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .header-contacts-link:hover  &,
+    .header-contacts-link:focus  & {
+    fill: $accent-color;
+    cursor: pointer;
+    }
+  }
+  
+  .header-icon.mail {
+    @extend %header-icon;
+    width: 16px; 
+    height: 12px;
+  }
+  
+  .header-icon.phone {
+    @extend %header-icon;
+    width: 11px; 
+    height: 15px;
+  }
+  

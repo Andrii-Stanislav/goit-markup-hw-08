@@ -1,0 +1,106 @@
+.team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: $secondary-bg-color;
+  }
+  
+  .team-section .container {
+  @extend %section-container; 
+  }
+  
+  .team-title {
+     @extend %section-title;
+     color: var(--secondary-text-color);
+  }
+
+  .team-list {
+    @extend %list;
+    display: flex;
+  }
+  
+  .team-list-item {
+    width: 270px;
+    padding-bottom: 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+  }
+  
+  
+  .team-img {
+    margin-bottom: 30px;
+  }
+  
+  .team-person {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: $secondary-text-color;
+  }
+  
+  .team-job {
+    margin-bottom: 16px;
+  
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: $primery-text-color;
+  }
+  
+  .team-social-list {
+    @extend %list;
+    display: flex;
+    width: 206px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .team-social-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .team-social-link {
+    @extend %link;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+        background-color: $accent-color;
+        cursor: pointer;
+        }
+  }
+
+  // SVG file
+  .social-icon.team-link {
+    fill: #AFB1B8;
+  }
+  
+  .social-icon {
+    width: 20px;
+    height: 20px; 
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        .team-social-link:focus &,
+        .team-social-link:hover & {
+        fill: $darkbackground-text-color;
+        cursor: pointer;
+        }
+  }
+  
+  .social-icon.team-link {
+    fill: #AFB1B8;
+  }
+  
+

@@ -1,0 +1,300 @@
+.modal-overlay {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .modal-overlay.is-hidden .modal-container {
+    transform: translate(-50%,-50%) scale(1.2);
+  } 
+  
+  .modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    width: 528px;
+    padding: 40px;
+    
+    background-color: #ffffff;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .close-modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .close-btn-svg {
+    width: 11px;
+    height: 11px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        .close-modal-btn:hover &, 
+        .close-modal-btn:focus & {
+        fill: $accent-color;
+        }
+  }
+  
+
+//font-family: Roboto;
+// font-style: normal;
+// font-weight: bold;
+// font-size: 20px;
+// line-height: 23px;
+// text-align: center;
+// letter-spacing: 0.03em;
+
+// color: #212121;
+
+
+  .modal-header {
+  margin: 0px 0px 30px 0px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color; 
+  }
+  
+  .modal-form {
+    position: relative;
+  }
+  
+  %label-modal {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+  
+    color: $primery-text-color;
+  
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        .input-modal:focus + & {
+        transform: translate(-20px, -30px);
+        font-size: 12px;
+        color: $accent-color;
+        }
+  }
+  
+  .label-text {
+    @extend %label-modal;
+    position: absolute;
+    top: 12px;
+    left: 42px;
+
+      .input-modal[type="text"]:not(:placeholder-shown).input-modal[type="text"]:not(:focus) ~ & {
+        transform: translate(-20px, -30px);
+        font-size: 12px;
+      }
+  }
+
+  .label-tel {
+    @extend %label-modal;
+    position: absolute;
+    top: 80px;
+    left: 42px;
+
+      .input-modal[type="tel"]:not(:placeholder-shown).input-modal[type="tel"]:not(:focus) ~ & {
+        transform: translate(-20px, -30px);
+        font-size: 12px;
+      }
+  }
+
+  .label-mail {
+    @extend %label-modal;
+    position: absolute;
+    top: 148px;
+    left: 42px;
+
+      .input-modal[type="email"]:not(:placeholder-shown).input-modal[type="email"]:not(:focus) ~ & {
+        transform: translate(-20px, -30px);
+        font-size: 12px;
+      }
+  }
+
+  .input-modal {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 28px;
+    padding: 12px 16px 12px 42px;
+    
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    
+    color: $primery-text-color;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    
+    transition: 250ms border-color cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus {
+            border-color: $accent-color;
+        }
+  }
+  
+  %modal-icon {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    display: block;
+    width: 18px;
+    height: 18px;
+  
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  
+    transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .modal-icon-text {
+    @extend %modal-icon;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+
+    .input-modal[type="text"]:focus ~ & {
+      fill: $accent-color;
+    }
+  }
+  
+  
+  .modal-icon-tel {
+    @extend %modal-icon;
+    position: absolute;
+    top: 80px;
+    left: 16px;
+
+    .input-modal[type="tel"]:focus ~ & {
+      fill: $accent-color;
+    }
+  }
+  
+  .modal-icon-mail {
+    @extend %modal-icon;
+    position: absolute;
+    top: 148px;
+    left: 16px;
+
+    .input-modal[type="email"]:focus ~ & {
+      fill: $accent-color;
+    }
+  }
+  
+  .textarea {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+  
+    color: $primery-text-color;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  
+    transition: 250ms border-color cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:focus {
+        border-color: $accent-color;
+      }
+  }
+  
+  .modal-checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  .modal-checkbox-icon {
+    position: absolute;
+    top: 352px;
+    left: 16px;
+    display: block;
+    width: 16px;
+    height: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    border: 2px solid $secondary-text-color;
+    border-radius: 2px;
+    fill-opacity: 0;
+  
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      .modal-checkbox:checked + & {
+        border: 0px;
+        fill-opacity: 1;
+      }
+  }
+  
+  .modal-checkbox-label {
+    margin-left: 36px;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $primery-text-color;
+  }
+  
+  .modal-contract {
+    font-size: 14px;
+    line-height: 1.71;
+    color: $accent-color;
+  }
+  
+  .mobal-send-btn {
+    display: block;
+    padding: 10px 32px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 0px;
+    border-radius: 4px;
+  
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $darkbackground-text-color;
+    background-color: $accent-color;
+    cursor: pointer;
+  }
+  
