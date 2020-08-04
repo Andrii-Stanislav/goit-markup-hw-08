@@ -769,12 +769,12 @@ body {
   outline: none;
 }
 
-.portfolio-btn-item:not(:last-of-type) {
-  margin-right: 8px;
+.portfolio-btn-item {
+  margin-bottom: 15px;
 }
 
-.portfolio-btn-item:nth-child(n+4) {
-  margin-top: 15px;
+.portfolio-btn-item:not(:last-of-type) {
+  margin-right: 8px;
 }
 
 .portfolio-list {

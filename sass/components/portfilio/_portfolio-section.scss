@@ -1,5 +1,5 @@
 .portfolio-section {
-padding: 60px 0;
+    padding: 60px 0;
     border-top: 1px solid #ECECEC;
 
     @media screen and (min-width: 480px) {
@@ -77,12 +77,10 @@ padding: 60px 0;
   }
   
   .portfolio-btn-item {
+    margin-bottom: 15px;
+
     &:not(:last-of-type) {
       margin-right: 8px;
-    }
-
-    &:nth-child(n+4) {
-      margin-top: 15px;
     }
   }
   
@@ -129,7 +127,7 @@ padding: 60px 0;
   
   .portfolio-list-link img {
     width: 450px;
-    
+
     @media screen and (min-width: 768px) {
       width: 370px;
     }
