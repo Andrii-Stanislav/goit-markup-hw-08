@@ -13,13 +13,7 @@
     <header class="header">
       <div class="container">
         <a class="logo link" href="./" aria-label="Логотип компании"><span class="logo-accent">Web</span> Studio</a>
-        <button class="menu-button" aria-label="Кнопка открытия меню страници">
-          <svg class="menu-button-svg">
-            <use class="menu-open-svg" href="./images/sprite.svg#menu-open"></use>
-            <use class="menu-close-svg" href="./images/sprite.svg#menu-close"></use>
-          </svg>
-        </button>
-        <div class="header-hidden-nav">
+        <div class="header-mobile-nav is-close-menu" data-menu>
           <nav class="main-nav">
             <ul class="list">
               <li class="main-nav-link-item">
@@ -53,6 +47,12 @@
             >
           </address>
         </div>
+        <button class="menu-button" aria-label="Кнопка открытия меню страници" data-menu-open>
+          <svg class="menu-button-svg">
+            <use class="menu-open-svg" href="./images/sprite.svg#menu-open"></use>
+            <use class="menu-close-svg" href="./images/sprite.svg#menu-close"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -615,5 +615,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

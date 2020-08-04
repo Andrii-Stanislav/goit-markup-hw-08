@@ -7,6 +7,10 @@
       ), url(../../images/hero/hero.jpg);
     background-position: center;
     background-size: cover;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 60px;
+    }
     }
 
     .hero-section .container {

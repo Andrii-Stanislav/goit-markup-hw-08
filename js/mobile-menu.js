@@ -1,0 +1,13 @@
+(() => {
+    const refs = {
+      openModalBtn: document.querySelector('[data-menu-open]'),
+      modal: document.querySelector('[data-menu]'),
+    };
+  
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  
+    function toggleModal() {
+      refs.modal.classList.toggle('is-close-menu');
+    }
+  })();
