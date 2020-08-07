@@ -11,23 +11,28 @@
       width: 480px;
     }
   
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       display: flex;
-      width: 768px
+      flex-wrap: wrap;
+      width: 768px;
+      justify-content: space-around;
     }
 
     @media screen and (min-width: 1200px) {
+      display: flex;
       max-width: 1200px;
     }
 
   } 
   
   .footer-contacts {
-    margin-bottom: 60px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
 
     @media screen and (min-width: 768px) {
-      margin-right: 69px;
-      margin-bottom: 0px;
+      
     }
 
     @media screen and (min-width: 1200px) {
@@ -37,7 +42,8 @@
   
   .footer-logo {
     @extend %link;
-    display: block;
+    display: inline-flex;
+    width: 141px;
     margin-bottom: 20px;
   
     font-family: $font-logo;
@@ -78,17 +84,19 @@
   }
   
   .join-section {
-    margin-bottom: 60px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
 
     @media screen and (min-width: 768px) {
-      padding-top: 12px;
-      padding-bottom: 40px;
-      margin-bottom: 0;
-      margin-right: 90px;
       width: 206px;
     }
 
     @media screen and (min-width: 1200px) {
+      padding-top: 12px;
+      padding-bottom: 40px;
+      margin-bottom: 0;
+      margin-right: 90px;
     }
   }
   
@@ -146,7 +154,12 @@
   }
   
   .subscribe-container {
-    @media screen and (min-width: 768px) {
+
+    @media screen and (min-width: 767px) and (max-width: 1199px) {
+      margin-top: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
       display: inline-flex;
       flex-wrap: wrap;
       width: 570px;
@@ -154,20 +167,9 @@
       padding-top: 12px;
       padding-bottom: 34px;
     }
-
-    @media screen and (min-width: 1200px) {
-      display: inline-flex;
-      flex-wrap: wrap;
-      width: 570px;
-    }
   }
   
   .subscribe-word {
-
-    @media screen and (min-width: 768px) {
-      width: 358px;
-    }
-
     @media screen and (min-width: 1200px) {
       width: 358px;
     }
@@ -177,8 +179,7 @@
     width: 100%;
 
     @media screen and (min-width: 768px) {
-      width: 358px;
-      margin-right: 12px;
+
     }
 
     @media screen and (min-width: 1200px) {
@@ -201,9 +202,9 @@
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
 
-    @media screen and (min-width: 768px) {
-      width: 358px;
-      margin: 0;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: block;
+      width: 450px;
     }
 
     @media screen and (min-width: 1200px) {
