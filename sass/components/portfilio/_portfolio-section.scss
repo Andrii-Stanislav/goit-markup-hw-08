@@ -12,20 +12,7 @@
   }
   
   .portfolio-section .container {
-    margin: 0 auto;
-    padding: 0 15px;
-
-    @media screen and (min-width: 480px) {
-      width: 480px;
-    }
-
-    @media screen and (min-width: 768px) {
-      width: 768px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      width: 1200px;
-    }
+    @extend %section-container;
   }
   
   .portfolio-btn-list {
@@ -103,6 +90,7 @@
     }
 
     @media screen and (min-width: 1200px) {
+      width: calc((100% - 60px)/3);
       &:not(:nth-child(3n)) {
         margin-right: 30px;
       }

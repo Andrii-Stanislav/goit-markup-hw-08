@@ -78,7 +78,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-      
+      width: 270px;
     }
   }
 
@@ -86,16 +86,8 @@
   .team-img {
     width: 100%;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 480px) and (max-width: 767px){
       margin-top: -15px;
-    }
-
-    @media screen and (min-width: 768px) {
-      
-    }
-
-    @media screen and (min-width: 1200px) {
-      
     }
   }
   

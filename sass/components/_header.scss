@@ -133,6 +133,8 @@
   }
   
   @media screen and (min-width: 1200px) {
+    font-size: 24px;
+    margin-right: 85px;
   }
 }
 
@@ -151,11 +153,12 @@
 }
 
 .main-nav-link-item:not(:last-child) {
-  box-sizing: content-box;
 
-
+  @media screen and (max-width: 767px) {
+    box-sizing: content-box;
+  }
+  
   @media screen and (min-width: 768px) {
-    box-sizing: border-box;
     margin-right: 50px;    
   }
 }
@@ -164,8 +167,7 @@
   @extend %link;
   position: relative;
   display: inline-block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0;
 
   font-weight: 500;
   font-size: 14px;
@@ -201,9 +203,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;     
+    padding: 32px 0;     
   }
 }
 
@@ -242,11 +242,13 @@
 
   @media screen and (min-width: 768px) {
     padding: 5px 0;
+    display: flex;
+    align-items: center;
   }
 
   @media screen and (min-width: 1200px) {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
       &:not(:last-child) {
         margin-right: 30px;
