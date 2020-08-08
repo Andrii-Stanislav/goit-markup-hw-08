@@ -24,15 +24,14 @@
   .activities-list-item {
     position: relative;
     width: 370px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 294px;
 
         &::before {
          content: "";
          display: block;
          width: 370px;
          height: 294px;
+         background-size: 370px 294px;
         }
 
         &:nth-child(1)::before {
@@ -49,6 +48,23 @@
           
         &:not(:last-child) {
           margin-right: 30px;
+        }
+
+          @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+
+          &:nth-child(1)::before {
+            background-image: url(../../images/whot-we-do/desktop-app-2x.jpg);
+          }
+            
+          &:nth-child(2)::before {
+            background-image: url(../../images/whot-we-do/mobile-app-2x.jpg);
+          }
+            
+          &:nth-child(3)::before {
+            background-image: url(../../images/whot-we-do/design-2x.jpg);
+          }
         }
   }
 
