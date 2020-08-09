@@ -1345,12 +1345,12 @@ body {
 .footer .container {
   margin: 0 auto;
   padding: 60px 15px;
+  text-align: center;
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .footer .container {
     width: 480px;
-    text-align: center;
   }
 }
 
@@ -1364,7 +1364,6 @@ body {
     width: 768px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    text-align: center;
   }
 }
 
@@ -1374,6 +1373,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     width: 1200px;
+    text-align: left;
   }
 }
 
