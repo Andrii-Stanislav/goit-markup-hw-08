@@ -169,15 +169,21 @@
   }
 
   .portfolio-subtitle {
+    height: 36px;
     margin-top: 20px;
     margin-bottom: 4px;
     margin-left: 24px;
+    padding-right: 24px;
   
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: $secondary-text-color;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .portfolio-types {

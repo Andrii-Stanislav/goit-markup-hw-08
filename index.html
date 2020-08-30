@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Веб Студия</title>
-    <link rel=preload as="image" href="./images/hero/hero.jpg" imagesrcset="./images/hero/hero-2x.jpg 2x" imagesizes="100vw"> 
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/min_css/main.min.css" />
   </head>
@@ -13,7 +12,7 @@
     <header class="header">
       <div class="container">
         <a class="logo link" href="./" aria-label="Логотип компании"><span class="logo-accent">Web</span> Studio</a>
-        <div class="header-mobile-nav is-close-menu" data-menu>
+        <div class="header-mobile-nav is-close-menu" aria-expanded="false" data-menu>
           <nav class="main-nav">
             <ul class="list">
               <li class="main-nav-link-item">
@@ -47,7 +46,7 @@
             >
           </address>
         </div>
-        <button class="menu-button" aria-label="Кнопка открытия меню страници" data-menu-open>
+        <button class="menu-button" aria-label="Кнопка открытия меню страници" data-menu-button>
           <svg class="menu-button-svg">
             <use class="menu-open-svg" href="./images/sprite.svg#menu-open"></use>
             <use class="menu-close-svg" href="./images/sprite.svg#menu-close"></use>
