@@ -1,1 +1,1 @@
-# goit-markup-hw
+# Web Studio project
